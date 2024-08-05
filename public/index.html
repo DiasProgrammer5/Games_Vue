@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <v-container>
+            <v-row justify="center">
+            <h1> Jogos </h1><br /><br /><br /> 
+            </v-row>
+            <v-row justify="center">
+            <v-btn elevation="2" v-on:click = "memory" > Jogo da memória</v-btn>
+            <v-btn elevation="2" v-on:click = "galo" > Jogo do Galo </v-btn>
+            <v-btn elevation="2" v-on:click = "forca" > Jogo da forca </v-btn>
+            <v-btn elevation="2" v-on:click = "calculator" > calculadora</v-btn>
+            <v-btn elevation="4" v-on:click = "game" > Trivia Game </v-btn>
+            <v-btn elevation="4" v-on:click = "last" > Pedra Papel ou Tesoura </v-btn>
+
+          </v-row><br /><br /><br /><br />  
+            <div v-if = "jogomemoria === true">
+              <jogo-memoria>  </jogo-memoria>
+            </div>
+            <div v-if = "jogogalo === true">
+              <jogo-galo>  </jogo-galo>
+            </div>
+            <div v-if = "jogoforca === true">
+              <jogo-forca>  </jogo-forca>
+            </div>
+            <div v-if = "jogocalculator === true">
+              <multi-calculator>  </multi-calculator>
+            </div>
+            <div v-if = "triviagame === true">
+              <trivia-game>  </trivia-game>
+            </div>
+            <div v-if = "lastgame === true">
+              <last-game>  </last-game>
+            </div>
+                
+          </v-container>
+        </v-main>
+      </v-app>
+
+    </div>
+  </body>
+</html>
